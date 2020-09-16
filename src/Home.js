@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
 import moment from 'moment';
+import { Container, Button, Text } from 'native-base';
 
 class Home extends Component {
 
@@ -45,7 +46,10 @@ class Home extends Component {
     render() {
         const { fetchedData, count } = this.state;
         return (
-            <View style={styles.wholeViewStyle}>
+            <Container style={styles.wholeViewStyle}>
+                
+                <Button onPress={() => alert('Could not perform duee to lack of time')}><Text>Apply Filter</Text></Button>
+                 
                 {
                     (fetchedData.length > 0)?
                         <View style={styles.itemsWholeViewStyle}>
@@ -111,7 +115,7 @@ class Home extends Component {
                             />
                         </View>
                 }    
-            </View>
+            </Container>
         )
     }
 }

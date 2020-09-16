@@ -4,6 +4,7 @@ import { Easing, Animated } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStackStyleInterpolator } from '@react-navigation/stack';
 import HomeScreen from './Home';
+import DisplayJsonScreen from './DisplayJson';
 
 const Stack = createStackNavigator();
 
@@ -95,6 +96,12 @@ return (
         <Stack.Screen  name="Home" component={HomeScreen} 
           options={{
             cardStyleInterpolator: transitionConfig
+          }}
+        />
+
+        <Stack.Screen  name="displayJson" component={DisplayJsonScreen} 
+          options={{
+              cardStyleInterpolator: transitionAnim
           }}
         />
         
